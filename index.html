@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tim — Content, Sales & AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0d10;color:#f5f7fa;font-family:Inter,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1080px;margin:auto;padding:24px 22px 70px}
+.topbar{display:flex;justify-content:flex-end;gap:8px}
+.lang{border:1px solid #343a43;background:#12161b;color:#cbd1d8;border-radius:9px;padding:8px 12px;cursor:pointer;font-weight:700}
+.lang.active{background:#fff;color:#0b0d10}
+.hero{padding:65px 0 48px;border-bottom:1px solid #262a30}
+.badge{display:inline-block;padding:7px 12px;border:1px solid #3b424c;border-radius:999px;color:#b9c1cb;font-size:13px}
+h1{font-size:clamp(42px,7vw,76px);line-height:.98;margin:20px 0 18px;letter-spacing:-3px}
+h2{font-size:30px;margin:55px 0 18px;letter-spacing:-.5px}
+h3{margin:0 0 9px;font-size:21px}
+.lead{font-size:21px;max-width:800px;color:#cbd1d8}
+.cta{display:inline-block;margin-top:24px;background:#fff;color:#0b0d10;text-decoration:none;padding:13px 20px;border-radius:10px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:#12161b;border:1px solid #272d35;border-radius:16px;padding:24px}
+.price{font-size:24px;font-weight:800;margin-top:18px}
+.muted{color:#9da6b1}
+.tag{display:inline-block;background:#1b2027;border-radius:7px;padding:5px 8px;font-size:12px;margin:3px 3px 3px 0;color:#cbd1d8}
+.case{min-height:240px}
+.before{color:#8f98a3;text-decoration:line-through}
+.after{font-size:20px;font-weight:700;margin:8px 0}
+ul{padding-left:20px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.fact{padding:18px;background:#12161b;border:1px solid #272d35;border-radius:14px}
+.fact b{display:block;font-size:25px;margin-bottom:5px}
+.note{margin-top:20px;color:#8f98a3;font-size:13px}
+footer{margin-top:60px;padding-top:24px;border-top:1px solid #262a30;color:#8f98a3}
+@media(max-width:700px){.grid,.facts{grid-template-columns:1fr}h1{letter-spacing:-2px}.topbar{justify-content:center}}
+
+.case-showcase{margin-top:22px}
+
+
+
+.live-case{margin-top:24px}
+.live-visual{position:relative;overflow:hidden;border:1px solid #303640;border-radius:18px;background:linear-gradient(135deg,#06131f,#102f42);min-height:330px;padding:34px}
+.live-visual:after{content:"LIVE PROJECT";position:absolute;right:18px;top:18px;padding:7px 10px;border:1px solid #ffffff2b;background:#ffffff12;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.08em;color:#d9f7ff}
+.live-title{font-size:clamp(32px,5vw,58px);line-height:.98;letter-spacing:-2px;max-width:650px;margin:45px 0 15px}
+.live-sub{max-width:690px;color:#b9cbd3;font-size:17px}
+.live-pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.live-pill{padding:7px 10px;border-radius:8px;background:#ffffff0d;border:1px solid #ffffff17;color:#d7e5eb;font-size:12px}
+.live-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.live-btn{display:inline-block;text-decoration:none;padding:12px 17px;border-radius:10px;border:1px solid #3b4651;background:#121920;color:#f5f7fa;font-weight:800}
+.live-btn.primary{background:#fff;color:#071016;border-color:#fff}
+.live-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.live-mini{background:#12161b;border:1px solid #272d35;border-radius:12px;padding:16px}
+.live-mini b{display:block;margin-bottom:5px}
+@media(max-width:700px){.live-visual{padding:24px;min-height:390px}.live-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="topbar">
+<button class="lang active" id="ruBtn" onclick="setLang('ru')">RU</button>
+<button class="lang" id="enBtn" onclick="setLang('en')">EN</button>
+</div>
+
+<section class="hero">
+<span class="badge" data-ru="Фриланс • Контент • Продажи • AI" data-en="Freelance • Content • Sales • AI">Фриланс • Контент • Продажи • AI</span>
+<h1 data-ru="Помогаю бизнесу<br>продавать через контент." data-en="I help businesses<br>sell through content.">Помогаю бизнесу<br>продавать через контент.</h1>
+<p class="lead" data-ru="Создаю продающие тексты, карточки товаров, офферы, скрипты продаж и простые лендинги. Использую AI для ускорения процессов, но каждый материал проходит ручную редактуру и адаптацию под конкретную аудиторию." data-en="I create conversion-focused copy, product listings, offers, sales scripts and simple landing pages. I use AI to accelerate production, while every deliverable is manually edited and tailored to its target audience.">Создаю продающие тексты, карточки товаров, офферы, скрипты продаж и простые лендинги. Использую AI для ускорения процессов, но каждый материал проходит ручную редактуру и адаптацию под конкретную аудиторию.</p>
+<a class="cta" href="#services" data-ru="Услуги и форматы работы →" data-en="Services & deliverables →">Услуги и форматы работы →</a>
+</section>
+
+<section>
+<h2 data-ru="Услуги" data-en="Services">Услуги</h2>
+<div class="grid" id="services">
+<div class="card"><h3 data-ru="Карточки товаров и e-commerce" data-en="Product listings & e-commerce">Карточки товаров и e-commerce</h3><p class="muted" data-ru="Структурирую информацию о продукте и превращаю характеристики в понятные покупателю преимущества. Работаю с заголовками, описаниями, преимуществами, возражениями и призывами к действию." data-en="I structure product information and turn technical features into clear customer benefits. I work with titles, descriptions, key benefits, objections and calls to action.">Структурирую информацию о продукте и превращаю характеристики в понятные покупателю преимущества. Работаю с заголовками, описаниями, преимуществами, возражениями и призывами к действию.</p><span class="tag">Ozon</span><span class="tag">WB</span><span class="tag">E-commerce</span><div class="price" data-ru="от 700 ₽" data-en="from $8">от 700 ₽</div></div>
+
+<div class="card"><h3 data-ru="Продающие тексты и офферы" data-en="Conversion copy & offers">Продающие тексты и офферы</h3><p class="muted" data-ru="Разрабатываю тексты для сайтов, объявлений, социальных сетей и коммерческих предложений. Фокус — ясное позиционирование, ценность продукта и следующий шаг для клиента." data-en="I write copy for websites, ads, social media and commercial proposals. The focus is clear positioning, customer value and a strong next step.">Разрабатываю тексты для сайтов, объявлений, социальных сетей и коммерческих предложений. Фокус — ясное позиционирование, ценность продукта и следующий шаг для клиента.</p><span class="tag">Copywriting</span><span class="tag">Offers</span><span class="tag">Content</span><div class="price" data-ru="от 700 ₽" data-en="from $8">от 700 ₽</div></div>
+
+<div class="card"><h3 data-ru="Скрипты продаж" data-en="Sales scripts">Скрипты продаж</h3><p class="muted" data-ru="Проектирую сценарии коммуникации: первое сообщение, квалификация клиента, презентация предложения, работа с возражениями и переход к целевому действию." data-en="I build customer communication flows: opening message, qualification, offer presentation, objection handling and the transition to the desired action.">Проектирую сценарии коммуникации: первое сообщение, квалификация клиента, презентация предложения, работа с возражениями и переход к целевому действию.</p><span class="tag">Sales</span><span class="tag">Scripts</span><span class="tag">CRM</span><div class="price" data-ru="от 1 000 ₽" data-en="from $12">от 1 000 ₽</div></div>
+
+<div class="card"><h3 data-ru="Одностраничные сайты" data-en="Landing pages">Одностраничные сайты</h3><p class="muted" data-ru="Создаю компактные лендинги для услуг и малого бизнеса: структура, текст, базовая визуальная подача и адаптация под мобильные устройства." data-en="I create compact landing pages for services and small businesses: structure, copy, basic visual presentation and mobile responsiveness.">Создаю компактные лендинги для услуг и малого бизнеса: структура, текст, базовая визуальная подача и адаптация под мобильные устройства.</p><span class="tag">HTML</span><span class="tag">Landing</span><span class="tag">AI</span><div class="price" data-ru="от 3 000 ₽" data-en="from $35">от 3 000 ₽</div></div>
+</div>
+</section>
+
+
+<section>
+<h2 data-ru="Готовый коммерческий кейс" data-en="Completed commercial case">Готовый коммерческий кейс</h2>
+<div class="card case-showcase">
+  <h3 data-ru="NHA TRANG SUP — лендинг для туристического бизнеса" data-en="NHA TRANG SUP — landing page for a tourism business">NHA TRANG SUP — лендинг для туристического бизнеса</h3>
+  <p class="muted" data-ru="Коммерческий одностраничный сайт, разработанный с нуля под задачу привлечения заявок на SUP-прогулки в Нячанге. Проект сочетает продающую структуру, визуальную подачу продукта и интерактивные элементы, которые помогают пользователю выбрать маршрут и перейти к бронированию." data-en="A commercial landing page built from scratch to generate bookings for SUP tours in Nha Trang. The project combines conversion-focused structure, visual product presentation and interactive elements that help visitors choose a route and move toward booking.">Коммерческий одностраничный сайт, разработанный с нуля под задачу привлечения заявок на SUP-прогулки в Нячанге. Проект сочетает продающую структуру, визуальную подачу продукта и интерактивные элементы, которые помогают пользователю выбрать маршрут и перейти к бронированию.</p>
+
+  <div class="live-case">
+    <div class="live-visual">
+      <div class="badge" data-ru="Опубликованный проект" data-en="Published project">Опубликованный проект</div>
+      <div class="live-title">NHA TRANG SUP</div>
+      <p class="live-sub" data-ru="Коммерческий лендинг для SUP-прогулок в Нячанге — от структуры и позиционирования до готового опубликованного сайта." data-en="A commercial landing page for SUP tours in Nha Trang — from structure and positioning to a fully published website.">Коммерческий лендинг для SUP-прогулок в Нячанге — от структуры и позиционирования до готового опубликованного сайта.</p>
+
+      <div class="live-pills">
+        <span class="live-pill">Landing Page</span>
+        <span class="live-pill">UX / UI</span>
+        <span class="live-pill">Copywriting</span>
+        <span class="live-pill">HTML / CSS / JS</span>
+        <span class="live-pill">Mobile-first</span>
+      </div>
+
+      <div class="live-actions">
+        <a class="live-btn primary" href="https://astemirbaks007.github.io/sup-nhatrang/#top" target="_blank" rel="noopener" data-ru="Открыть рабочий сайт →" data-en="Open live website →">Открыть рабочий сайт →</a>
+        <a class="live-btn" href="https://astemirbaks007.github.io/sup-nhatrang/" target="_blank" rel="noopener" data-ru="Открыть в новой вкладке" data-en="Open in new tab">Открыть в новой вкладке</a>
+      </div>
+    </div>
+
+    <div class="live-grid">
+      <div class="live-mini"><b data-ru="Задача" data-en="Goal">Задача</b><span class="muted" data-ru="Презентация туристического продукта и генерация заявок." data-en="Present the tourism product and generate leads.">Презентация туристического продукта и генерация заявок.</span></div>
+      <div class="live-mini"><b data-ru="Что сделано" data-en="Delivered">Что сделано</b><span class="muted" data-ru="Структура, тексты, визуальная система, адаптив и интерактив." data-en="Structure, copy, visual system, responsive layout and interactions.">Структура, тексты, визуальная система, адаптив и интерактив.</span></div>
+      <div class="live-mini"><b data-ru="Результат" data-en="Result">Результат</b><span class="muted" data-ru="Рабочий сайт опубликован в интернете и доступен для просмотра." data-en="A live website published online and available to view.">Рабочий сайт опубликован в интернете и доступен для просмотра.</span></div>
+    </div>
+  </div>
+
+  <p class="note" data-ru="Часть визуальных материалов и контактных настроек в проекте является демонстрационной; перед коммерческим запуском они заменяются на данные заказчика." data-en="Some visual assets and contact settings are demonstrational and should be replaced with the client’s real data before commercial launch.">Часть визуальных материалов и контактных настроек в проекте является демонстрационной; перед коммерческим запуском они заменяются на данные заказчика.</p>
+</div>
+</section>
+
+<section>
+<h2 data-ru="Демонстрационные кейсы" data-en="Selected samples">Демонстрационные кейсы</h2>
+<p class="muted" data-ru="Ниже показан подход к работе. Это демонстрационные примеры, а не вымышленные отзывы или результаты клиентов." data-en="The examples below demonstrate my approach. They are samples, not fabricated client testimonials or results.">Ниже показан подход к работе. Это демонстрационные примеры, а не вымышленные отзывы или результаты клиентов.</p>
+<div class="grid">
+<div class="card case"><h3>01 / Product listing</h3><p class="before">«Кофемашина. Мощность 1450 Вт. Давление 15 бар.»</p><div class="after">«Кофе как в кофейне — за 40 секунд»</div><p class="muted" data-ru="Вместо перечисления характеристик сначала показываем понятную ценность для покупателя, затем подтверждаем её характеристиками продукта." data-en="Instead of leading with specifications, the copy starts with a clear customer benefit and then supports it with product specifications.">Вместо перечисления характеристик сначала показываем понятную ценность для покупателя, затем подтверждаем её характеристиками продукта.</p></div>
+
+<div class="card case"><h3>02 / Service offer</h3><p class="before">«Создаём сайты для бизнеса.»</p><div class="after">«Одностраничный сайт для бизнеса за 1 день — текст, структура и мобильная версия.»</div><p class="muted" data-ru="Абстрактное описание заменено конкретным результатом, сроком и составом работы." data-en="The abstract statement is replaced with a concrete deliverable, timeframe and scope of work.">Абстрактное описание заменено конкретным результатом, сроком и составом работы.</p></div>
+
+<div class="card case"><h3>03 / Restaurant</h3><p class="before">«У нас вкусная еда и приятная атмосфера.»</p><div class="after">«Ужин без долгих поисков: кухня, коктейли и удобное расположение.»</div><p class="muted" data-ru="Коммуникация строится вокруг сценария клиента и конкретных причин выбрать заведение, а не общих рекламных формулировок." data-en="The message focuses on the customer's situation and concrete reasons to choose the venue instead of generic advertising language.">Коммуникация строится вокруг сценария клиента и конкретных причин выбрать заведение, а не общих рекламных формулировок.</p></div>
+
+<div class="card case"><h3>04 / Sales script</h3><p class="before">«Здравствуйте! Вас интересует наша услуга?»</p><div class="after">«Здравствуйте! Подскажу по стоимости и помогу подобрать вариант под вашу задачу.»</div><p class="muted" data-ru="Первое сообщение снижает трение и переводит разговор к конкретной потребности клиента." data-en="The opening reduces friction and moves the conversation toward the customer's actual need.">Первое сообщение снижает трение и переводит разговор к конкретной потребности клиента.</p></div>
+</div>
+</section>
+
+<section>
+<h2 data-ru="Профессиональный подход" data-en="How I work">Профессиональный подход</h2>
+<div class="facts">
+<div class="fact"><b data-ru="Структура" data-en="Structure">Структура</b><span class="muted" data-ru="Сначала определяю задачу, аудиторию и целевое действие. Затем собираю текст вокруг них." data-en="I start with the goal, audience and desired action, then build the content around them.">Сначала определяю задачу, аудиторию и целевое действие. Затем собираю текст вокруг них.</span></div>
+<div class="fact"><b data-ru="Скорость" data-en="Speed">Скорость</b><span class="muted" data-ru="Небольшие задачи могу брать в работу в день обращения и быстро возвращать первый вариант." data-en="Small tasks can be started the same day, with a first draft delivered quickly.">Небольшие задачи могу брать в работу в день обращения и быстро возвращать первый вариант.</span></div>
+<div class="fact"><b data-ru="Продажи" data-en="Sales">Продажи</b><span class="muted" data-ru="Опираюсь на практический опыт общения с клиентами и продаж, а не только на теорию копирайтинга." data-en="I combine copywriting with practical experience in customer communication and sales.">Опираюсь на практический опыт общения с клиентами и продаж, а не только на теорию копирайтинга.</span></div>
+</div>
+</section>
+
+<section>
+<h2 data-ru="Опыт" data-en="Background">Опыт</h2>
+<div class="card">
+<ul>
+<li data-ru="Продажи и работа с клиентами" data-en="Sales and customer communication">Продажи и работа с клиентами</li>
+<li data-ru="Перепродажа техники и работа с онлайн-объявлениями" data-en="Consumer electronics resale and online listings">Перепродажа техники и работа с онлайн-объявлениями</li>
+<li data-ru="Общепит и бар — понимание задач малого бизнеса изнутри" data-en="Hospitality and bar operations — practical understanding of small-business needs">Общепит и бар — понимание задач малого бизнеса изнутри</li>
+<li data-ru="AI-инструменты для исследования, подготовки и переработки контента" data-en="AI tools for research, content creation and refinement">AI-инструменты для исследования, подготовки и переработки контента</li>
+<li data-ru="Создание простых HTML-лендингов" data-en="Creation of simple HTML landing pages">Создание простых HTML-лендингов</li>
+</ul>
+<p class="note" data-ru="Для первых проектов доступна стартовая стоимость. Объём и срок согласовываются до начала работы." data-en="Introductory pricing is available for initial projects. Scope and delivery time are agreed before work begins.">Для первых проектов доступна стартовая стоимость. Объём и срок согласовываются до начала работы.</p>
+</div>
+</section>
+
+<footer>
+<strong>Tim</strong> — <span data-ru="контент • продажи • AI • лендинги" data-en="content • sales • AI • landing pages">контент • продажи • AI • лендинги</span><br>
+<span data-ru="Готов обсудить задачу и предложить конкретный формат работы." data-en="Available to discuss your project and propose a clear scope of work.">Готов обсудить задачу и предложить конкретный формат работы.</span>
+</footer>
+</div>
+
+<script>
+function setLang(lang){
+ document.documentElement.lang=lang;
+ document.querySelectorAll('[data-'+lang+']').forEach(el=>{
+   el.innerHTML=el.getAttribute('data-'+lang);
+ });
+ document.getElementById('ruBtn').classList.toggle('active',lang==='ru');
+ document.getElementById('enBtn').classList.toggle('active',lang==='en');
+ localStorage.setItem('portfolioLang',lang);
+}
+const saved=localStorage.getItem('portfolioLang');
+if(saved) setLang(saved);
+</script>
+</body>
+</html>
